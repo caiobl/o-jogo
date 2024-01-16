@@ -3,52 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Background</title>
+    <title></title>
     <style>
         body {
             margin: 0;
-            padding: 0;
             overflow: hidden;
         }
 
         video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover; /* Maintain original size without stretching */
-            width: auto;
-            height: auto;
+            top: 0;
+            left: 0;
             z-index: -1;
         }
 
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        #content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
             text-align: center;
-            color: white;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.5em;
-            margin-top: 0;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <video autoplay loop>
-       
+
+    
+    <video autoplay loop muted playsinline>
         <source src="Chipi chipi chapa chapa cat.mp4" type="video/mp4">
-       
+      
     </video>
 
+   
+  
 
 </body>
 </html>
